@@ -1,6 +1,15 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <title>Interactive Roadmap</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" />
 <style>
+  *{ box-sizing:border-box }
+  [hidden]{ display:none !important; }
+  html{ -webkit-text-size-adjust:100%; }
+  img{ max-width:100%; display:block; }
   /* Layout: a planning tool — team lanes × sprints; bars colored by status;
      neutral-ink chrome, with color coming from the content. */
   :root{
@@ -42,7 +51,7 @@
   }
 
   *{box-sizing:border-box}
-  body{background:var(--paper); color:var(--ink); font-family:var(--font-sans); line-height:1.5;
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:var(--font-sans); line-height:1.5;
     -webkit-font-smoothing:antialiased;}
   h1,h2,h3{font-family:var(--font-display); margin:0; letter-spacing:-.01em; text-wrap:balance;}
   button{font-family:inherit}
@@ -182,6 +191,8 @@
   }
   @media (prefers-reduced-motion: reduce){ *{ transition:none !important; } }
 </style>
+</head>
+<body>
 
 <div class="top">
   <div class="wrap">
@@ -479,3 +490,5 @@
   render();
 })();
 </script>
+</body>
+</html>
